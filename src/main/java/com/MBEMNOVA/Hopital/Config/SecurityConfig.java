@@ -35,7 +35,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .anyRequest().authenticated()
                 )
-                .httpBasic(httpBasic -> {}); // authentification via popup navigateur (Basic Auth)
+                .httpBasic(httpBasic -> {});
         return http.build();
     }
 }

@@ -11,6 +11,8 @@ public class RendezVousMapper {
         return RendezVousResponseDTO.builder()
                 .id(rdv.getId())
                 .patientId(rdv.getPatient().getId())
+                .patientNomComplet(rdv.getPatient().getPrenom() + " " + rdv.getPatient().getNom())
+                .patientTelephone(rdv.getPatient().getTelephone())
                 .hopitalId(rdv.getHopital().getId())
                 .hopitalNom(rdv.getHopital().getNom())
                 .hopitalLocalisation(rdv.getHopital().getLocalisation())
